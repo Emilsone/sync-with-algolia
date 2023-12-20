@@ -1,15 +1,14 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      ALGOLIA_APP_ID: 'ELDXAY4KDG';
-      ALGOLIA_ADMIN_API_KEY: '60dd1777497cfc4462e78171c43ea96b';
-      ALGOLIA_SEARCH_API_KEY: 'f925159aa644bc9e261b4636ee21638d';
-      ALGOLIA_INDEX_ID: 'appwrite_DATA';
-      APPWRITE_ENDPOINT?: 'https://cloud.appwrite.io/v1';
-      APPWRITE_API_KEY: '5b2c10bf8633781606df0ea2058dfcc640192fa3555cfa658f4adac7e0af0b13a5af3af5f95d07d4fcab14f45cabf28075564f40e89cedf646d3e75599cd15d58ed0673dec2eace026cb3baf6acfcc3f6e840d5e79d38ce0882e121e17fa3b3a719445d2d5ef756fd8f7cbff94c15590000d05a31c917de11691bd716ef0122d';
-      APPWRITE_FUNCTION_PROJECT_ID: '6581afb61991f1b62cce';
-      APPWRITE_DATABASE_ID: '6581ab5bed439ba16d65';
-      APPWRITE_COLLECTION_ID: '6581ac04138b5819b934';
+      ALGOLIA_APP_ID: string;
+      ALGOLIA_ADMIN_API_KEY: string;
+      ALGOLIA_SEARCH_API_KEY: string;
+      ALGOLIA_INDEX_ID: string;
+      APPWRITE_ENDPOINT?: string;
+      APPWRITE_API_KEY:string;
+      APPWRITE_DATABASE_ID: string;
+      APPWRITE_COLLECTION_ID: string;
     }
   }
 }
