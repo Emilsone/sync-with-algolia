@@ -15,9 +15,9 @@ export default async ({ req, res, log }) => {
 
   if (req.method === 'GET') {
     const html = interpolate(getStaticFile('index.html'), {
-      ALGOLIA_APP_ID: process.env.ALGOLIA_APP_ID,
-      ALGOLIA_INDEX_ID: process.env.ALGOLIA_INDEX_ID,
-      ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY,
+      ALGOLIA_APP_ID: 'ELDXAY4KDG',
+      ALGOLIA_INDEX_ID: 'appwrite_DATA',
+      ALGOLIA_SEARCH_API_KEY: 'f925159aa644bc9e261b4636ee21638d',
     });
 
     return res.send(html, 200, { 'Content-Type': 'text/html; charset=utf-8' });
@@ -27,16 +27,16 @@ export default async ({ req, res, log }) => {
     .setEndpoint(
       process.env.APPWRITE_ENDPOINT ?? 'https://cloud.appwrite.io/v1'
     )
-    .setProject(process.env.APPWRITE_FUNCTION_PROJECT_ID)
-    .setKey(process.env.APPWRITE_API_KEY);
+    .setProject('6581afb61991f1b62cce')
+    .setKey('5b2c10bf8633781606df0ea2058dfcc640192fa3555cfa658f4adac7e0af0b13a5af3af5f95d07d4fcab14f45cabf28075564f40e89cedf646d3e75599cd15d58ed0673dec2eace026cb3baf6acfcc3f6e840d5e79d38ce0882e121e17fa3b3a719445d2d5ef756fd8f7cbff94c15590000d05a31c917de11691bd716ef0122d');
 
   const databases = new Databases(client);
 
   const algolia = algoliasearch(
-    process.env.ALGOLIA_APP_ID,
-    process.env.ALGOLIA_ADMIN_API_KEY
+   'ELDXAY4KDG',
+   '60dd1777497cfc4462e78171c43ea96b'
   );
-  const index = algolia.initIndex(process.env.ALGOLIA_INDEX_ID);
+  const index = algolia.initIndex('appwrite_DATA');
 
   let cursor = null;
   do {
@@ -47,8 +47,8 @@ export default async ({ req, res, log }) => {
     }
 
     const response = await databases.listDocuments(
-      process.env.APPWRITE_DATABASE_ID,
-      process.env.APPWRITE_COLLECTION_ID,
+     '6581ab5bed439ba16d65',
+     '6581ac04138b5819b934',
       queries
     );
 
