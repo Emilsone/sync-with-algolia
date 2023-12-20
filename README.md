@@ -95,7 +95,7 @@ The ID of the index in Algolia where the documents are to be synced.
 | Question     | Answer               |
 | ------------ | -------------------- |
 | Required     | Yes                  |
-| Sample Value | `appwrite_index`     |
+| Sample Value | `appwrite_DATA`     |
 
 ### ALGOLIA_SEARCH_API_KEY
 
