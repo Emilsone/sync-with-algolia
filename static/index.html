@@ -58,21 +58,26 @@
         container: '#searchbox',
       });
 
-      const hits = instantsearch.widgets.hits({
-        container: '#hits',
-        templates: {
-          item(hit, { html, components }) {
-            return html`
-              <div class="card">
-                <pre>${JSON.stringify(hit, null, '\t')}</pre>
+    const hits = instantsearch.widgets.hits({
+      container: '#hits',
+      templates: {
+        item(hit, { html, components }) {
+          return html`
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">${hit.title}</h5>
+                <p class="card-text">${hit.description}</p>
+                <!-- Add other properties as needed -->
               </div>
-            `;
-          },
+            </div>
+          `;
         },
-      });
+      },
+    });
 
-      search.addWidgets([searchBox, hits]);
-      search.start();
+    search.addWidgets([searchBox, hits]);
+    search.start();
+
     </script>
   </body>
 </html>
